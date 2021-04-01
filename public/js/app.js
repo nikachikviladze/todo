@@ -1995,7 +1995,6 @@ __webpack_require__.r(__webpack_exports__);
     addTodo: function addTodo() {
       var _this2 = this;
 
-      console.log(this.todo);
       axios.post('/api/todo', {
         'title': this.todo.title,
         'user_id': this.todo.user_id,
@@ -2006,6 +2005,8 @@ __webpack_require__.r(__webpack_exports__);
         _this2.todo.deadline = '';
 
         _this2.fetchData();
+
+        alert('success');
       });
     },
     showToDo: function showToDo(id) {
@@ -2026,6 +2027,8 @@ __webpack_require__.r(__webpack_exports__);
         '_method': 'PUT'
       }).then(function (resp) {
         _this4.fetchData();
+
+        alert('success');
       });
     },
     deleteToDo: function deleteToDo(id) {

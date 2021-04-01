@@ -155,7 +155,6 @@
             addTodo(){
 
 
-console.log(this.todo)
               axios.post('/api/todo', {'title':this.todo.title, 
                                       'user_id':this.todo.user_id,
                                       'deadline':this.todo.deadline})
@@ -165,6 +164,8 @@ console.log(this.todo)
                      this.todo.deadline=''
 
                     this.fetchData()
+
+                    alert('success')
                 })
 
             },
@@ -183,6 +184,7 @@ console.log(this.todo)
                    .then(resp=>{
 
                     this.fetchData()
+                    alert('success')
                 })
 
             },
